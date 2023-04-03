@@ -2,6 +2,7 @@ package searchengine.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Site")
@@ -11,6 +12,7 @@ public class SiteDatabase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     int id;
+
 
     @Enumerated
     @Column(columnDefinition = "ENUM('INDEXING', 'INDEXED', 'FAILED')", nullable = false)
